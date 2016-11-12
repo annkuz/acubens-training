@@ -1,0 +1,37 @@
+// main: ../style.less
+
+.add-font(@fname, @ffamily, @fweight: normal, @fstyle: normal) {
+    font-family: @ffamily;
+    src: url('@{font-folder}@{fname}/@{fname}.eot');
+    src: url('@{font-folder}@{fname}/@{fname}.eot?#iefix') format('embedded-opentype'),
+    url('@{font-folder}@{fname}/@{fname}.ttf') format('truetype'),
+    url('@{font-folder}@{fname}/@{fname}.woff') format('woff'),
+    url('@{font-folder}@{fname}/@{fname}.svg#@{fname}') format('svg');
+  font-weight: @fweight;
+  font-style: @fstyle;
+}
+
+/*
+.add-font(@font-url, @font-name, @weight: normal, @style: normal) {
+  font-family: @font-name;
+  src: url('@{font-folder}@{font-url}.eot'); // IE9 Compat Modes 
+  src: url('@{font-folder}@{font-url}.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
+  url('@{font-folder}@{font-url}.woff') format('woff'), // Pretty Modern Browsers 
+  url('@{font-folder}@{font-url}.ttf') format('truetype'), // Safari, Android, iOS 
+  url('@{font-folder}@{font-url}.svg#@{font-name}') format('svg'); // Legacy iOS  
+  font-weight: @weight;
+  font-style: @style;
+}*/
+
+.transition() {
+  transition: all .3s ease-in-out;
+}
+
+.bg-img(@img, @pos:center, @att:scroll) {
+    background-image: url('@{img-folder}@{img}');
+    background-position: @pos;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: @att;
+    -ms-behavior: url('@{bg-polyfill}'); //ie8
+}

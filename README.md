@@ -2,8 +2,8 @@
 
 PSD - http://www.psdchat.com/resources/templates/acubens/
 
+<span>Skills:</span>
 <ul>
-  Skills:
   <li>HTML5</li>
   <li>LESS</li>
   <li>using Bootstrap grid</li>
